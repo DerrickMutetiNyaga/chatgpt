@@ -1,9 +1,8 @@
 // Load the HTTP module
 const http = require('http');
 
-// Define the hostname and port
-const hostname = '127.0.0.1';
-const port = 3000;
+// Use the port provided by Render or default to 3000
+const port = process.env.PORT || 3000;
 
 // Create an HTTP server
 const server = http.createServer((req, res) => {
@@ -13,6 +12,6 @@ const server = http.createServer((req, res) => {
 });
 
 // Start the server
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${port}/`);
 });
