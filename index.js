@@ -1,4 +1,4 @@
-// Import the http module
+// Load the HTTP module
 const http = require('http');
 
 // Define the hostname and port
@@ -7,9 +7,9 @@ const port = 3000;
 
 // Create an HTTP server
 const server = http.createServer((req, res) => {
-  res.statusCode = 200; // Set the HTTP status code to 200 (OK)
-  res.setHeader('Content-Type', 'text/plain'); // Set the response content type to plain text
-  res.end('Hello, World!\n'); // Send the response to the client
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
 });
 
 // Start the server
